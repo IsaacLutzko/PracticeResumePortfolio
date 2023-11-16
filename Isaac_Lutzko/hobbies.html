@@ -1,0 +1,234 @@
+<!-- Name: Isaac Lutzko
+     UCID: 30026703
+     SENG 513 Assignment 1 Section A: Portfolio Website - hobbies page 
+     Date: February 13, 2022
+
+     Description: This HTML file is for the hobbies page for this portfolio website and it contains
+     images and descriptions for the hobbies that I have.
+     
+     References: To complete this website I used the course slides, https://www.w3schools.com/, 
+     and https://developer.mozilla.org/en-US/.
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hobbies</title>
+
+     <!-- Importing css style sheet -->
+     <link rel="stylesheet" href="css/portfolio-style.css">
+
+    <!-- Include links for importing 2 - 3 different fonts (google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+     <!------------------------- HEADER START ------------------------->
+     <header class="portf-header">
+        <a href="" class="portf-logo">Isaac Lutzko</a>
+            <ul class="nav-list-drop">
+                <button class="nav-burger">ENTER THE VOID</button>
+                <div class="nav-dropdown">
+                <li class="navigate-item">
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li id="current-page" class="navigate-item">
+                    <a class="current-page" href="./hobbies.html">HOBBIES</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./work.html">WORK</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./home.html">HOME</a>
+                </li>
+                </div>
+            </ul>
+    </header>
+    <!------------------------- END HEADER ------------------------->
+
+
+    <!--------------------- START MAIN BACKGROUND IMAGE --------------------->
+    <div class="work-main-bg">
+        <img src="./images/hiking-image.JPG" alt="">
+        <div class="work-img-desc">HOBBIES & GOOD TIMES</div>
+    </div>
+    <!---------------------- END MAIN BG IMAGE ---------------------->
+
+
+     <!--------------------- START HOBBY 1 --------------------->
+     <div class="main-intro">
+        <div class="main-intro-flex">
+            <img class="main-image" src="./images/cycling-image.jpg" alt="">
+            <div class="main-description">
+                <p>
+                    I love biking! I started biking when I was young and 
+                    went on frequent rides with my family, and I guess that 
+                    stuck with me because I bike any chance I get! Biking 
+                    solo or in a group, in the rocky mountains or in quiet
+                    roads in the city, I'm very grateful that I get to bike 
+                    as much as I do!
+                </p> 
+            </div>
+        </div>
+    </div>
+    <!--------------------- END HOBBY 1 --------------------->
+
+
+    <!--------------------- START HOBBY 2 --------------------->
+    <div class="work-intro">
+        <div class="work-intro-flex">
+            <div class="work-description">
+                <p>
+                    Although I've only gotten more serious about playing guitar 
+                    in the past couple years, it has add a lot of value to my 
+                    life, especially my mental well-being. It has been a great way
+                    to relax and connect more deeply with myself, and it's something
+                    that really let's me express myself and I see as a form of 
+                    meditation for me. Some of my favourite songs to play are 'Down 
+                    in a Hole' by Alice In Chains, 'Pretty Pimpin' ' by Kurt Vile, 
+                    and Nirvana's version of 'Lake of Fire' by the Meat Puppets.
+                </p>
+            </div>
+            <div class="work-image-div"><img class="work-image" src="./images/guitar-image.jpg" alt=""></div>
+        </div>
+    </div>
+    <!--------------------- END HOBBY 2 --------------------->
+
+
+    <!--------------------- START HOBBY 3 --------------------->
+    <div class="hobbies-intro">
+        <div class="hobbies-intro-flex">
+            <img class="hobbies-image" src="./images/hockey-image.JPG" alt="">
+            <div id="hockey-desc" class="hobbies-description">
+                <table class="hockey-table">
+                    <tr>
+                        <th class="hockey-header" colspan="6">
+                            Another one of my hobbies is hockey. I've played hockey for
+                            over 15 years and coached for over 6. Here are some of my
+                            statistics since 2013:
+                        </th>
+                    </tr>
+                    <tr class="hockey-col">
+                        <th>Team</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>TP</th>
+                        <th>PIM</th>
+                    </tr>
+                    <tr class="hockey-col">
+                        <td>NWCAA Stamp U16 AAA</td>
+                        <td>36</td>
+                        <td>2</td>
+                        <td>7</td>
+                        <td>9</td>
+                        <td>40</td>
+                    </tr>
+                    <tr class="hockey-col">
+                        <td>NWCAA Stamps U18 AA</td>
+                        <td>26</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="hockey-col">
+                        <td>NWCAA Stamps U18 AA</td>
+                        <td>28</td>
+                        <td>5</td>
+                        <td>13</td>
+                        <td>28</td>
+                        <td>8</td>
+                    </tr>
+                    <tr class="hockey-col">
+                        <td>NWCAA Bruins Jr. B</td>
+                        <td>30</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>11</td>
+                        <td>10</td>
+                    </tr>
+                    <tr class="hockey-col">
+                        <td>NWCAA Bruins Jr. B</td>
+                        <td>27</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td>18</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END HOBBY 3 --------------------->
+
+
+     <!--------------------- START HOBBY 4 --------------------->
+     <div class="work-intro">
+        <div class="work-intro-flex">
+            <div class="work-description">
+                <p>
+                    Printing designs on clothing is also another hobbie I have. As 
+                    much as I don't like the negative social and environmental impact
+                    that the fashion industry has had on people, this is another way
+                    that I enjoy for expressing myself. Through a fairly lengthy process,
+                    I create designs on silk screens so that I can then use it to print 
+                    those designs on a piece of clothing such as t shirts.
+                </p>
+            </div>
+            <div class="work-image-div"><img class="work-image" src="./images/clothing-image.JPG" alt=""></div>
+        </div>
+    </div>
+    <!--------------------- END HOBBY 4 --------------------->
+
+
+    <!--------------------- START HOBBY 5 --------------------->
+    <div class="hobbies-intro">
+        <div class="hobbies-intro-flex">
+            <img class="hobbies-image" src="./images/reading-image.jpg" alt="">
+            <div class="hobbies-description">
+                <p>
+                    Reading is a hobby I have that has greatly benefitted me 
+                    and I see the value in it every day. I especially enjoy
+                    philosphy books about stoicism as I have learned a lot from 
+                    these books and I believe that they have helped me become
+                    a better person. I also like reading biographies and novels.
+                    Some of my favourite books are Greenlights by Matthew 
+                    McConaughey, Brave New World by Aldous Huxley, The Daily Stoic
+                    by Ryan Holiday, Fear and Loathing in Las Vegas by Hunter S. Thompson,
+                    and Ego is the Enemy by Ryan Holiday.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END HOBBY 5 --------------------->
+
+
+    <!--------------------- START "FOOTER" --------------------->
+    <footer class="main-footer">
+        <ul class="nav-footer">
+            <li class="nav-footer-item">
+                <a href="./about.html">ABOUT</a>
+            </li>
+            <li id="current-page-footer" class="nav-footer-item">
+                <a class="current-page-footer" href="./hobbies.html">HOBBIES</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./work.html">WORK</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./home.html">HOME</a>
+            </li>
+        </ul>
+
+    </footer>
+    <!--------------------- END "FOOTER" --------------------->
+    
+</body>
+</html>

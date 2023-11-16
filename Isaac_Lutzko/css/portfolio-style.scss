@@ -1,0 +1,793 @@
+/**
+    Name: Isaac Lutzko
+    UCID: 30026703
+    SENG 513 Assignment 1 Section A: Portfolio Website - CSS stylesheet page
+    Date: February 13, 2022
+
+    Description: This CSS file 
+
+    References: To complete this website I used the course slides, https://www.w3schools.com/, 
+    and https://developer.mozilla.org/en-US/, and for the stock ticker animation on the home page
+    I learned more about keyframes and animation here: https://code-boxx.com/html-css-news-ticker-horizontal-vertical/
+*/
+
+// Styling that is consistent for everything
+body {
+    background-image: linear-gradient(180deg, rgb(250,235,215), rgb(211,211,211));
+    overflow-x:hidden;
+    margin: 0;
+}
+
+// Styling for small - medium devices (following mobile first design)
+@media screen and (min-width: 200px) {
+    // ======================= STYLING HEADER =======================
+    .portf-header {
+        display: flex;
+        position:sticky; top:0;
+        background-color:rgb(34,139,34);
+        z-index: 9999;
+    }
+     // This is for logo on the left with my name
+     .portf-header .portf-logo {
+        font-size: 250%;
+        color: rgb(250,235,215);
+        font-family: 'Shrikhand', cursive;
+        text-decoration: none;
+        flex-basis: 100%;  
+        align-self: center;
+        margin-left: 4%;
+    }
+    .nav-burger {
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+        padding: 16px;
+        margin-right: 5%;
+        font-size: 150%;
+        border: none;
+        cursor: wait;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+    .nav-list-drop {
+        list-style: none;
+        padding: 0;
+        position: relative;
+        display: block;
+    }
+    .nav-dropdown {
+        position: absolute;
+        display: block;
+        top:auto;
+    }
+    .navigate-item {
+        display: none;
+        position: absolute; 
+        background-color: rgb(27, 18, 18);
+        z-index: -1; 
+        width: auto; 
+
+    }
+    .nav-list-drop a {
+        display: block;
+        text-decoration: none;
+        padding: 12px; 
+        color:rgb(250,235,215);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+    .nav-list-drop a:hover {
+        color: rgb(220,20,60);
+    }
+    .nav-list-drop:hover .navigate-item {
+        display: block;
+        position:sticky;
+        z-index: 1;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING WORDS/QUOTES =======================
+    // main section top (first word)
+    .main-sect-1 {
+        display: flex;
+        height: 12rem;
+        margin-top: 7vh;
+    }
+    .word-1 {
+        flex-basis: 100%;
+        display: flex;
+        flex: 3;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 12.5vw;
+        padding-left: 5%;
+    }
+    .word-spacer {
+        display: none;
+    }
+    // main section middle (statements/quotes + second word)
+    .main-sect-2 {
+        display: flex;
+        height: 30rem;
+        flex-wrap: wrap;
+    }
+    .statement {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3vw;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+    }
+    .word-2 {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12.5vw;
+    }
+    .word2-spacer1 {
+        display: none;
+    }
+    .word2-spacer2 {
+        display: none;
+    }
+    // main section bottom (third and last word)
+    .main-sect-3 {
+        display: flex;
+        height: 15rem;
+        margin-bottom: 20vh;
+        flex-wrap: wrap;
+    }   
+    .word-3 {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12.5vw;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING IMAGE/TABLE =======================
+    .main-intro {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-intro-flex {
+        margin: auto;
+        max-width: 90%;
+        align-items: center;
+    }
+    .main-image {
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 5%;
+        flex:1;
+    }
+    .main-description {
+        display: flex;
+        flex:1;
+        align-items: center;
+        text-align: center;
+        margin: 5%;
+        font-family: 'Montserrat', sans-serif;
+        border: 5px solid rgb(34,139,34);
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    .main-description p{
+        margin: 5%;
+    }
+    .main-description a {
+        text-decoration: none;
+        color: rgb(30,144,255);
+    }
+    //========================================================================
+
+
+    // ======================= TICKER TICKER =======================
+    .ticker-main {
+        overflow: hidden; 
+        background: rgb(27, 18, 18);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        z-index: 1;
+    }
+    .ticker-move {
+        display: flex;
+        height: 10vh;
+    }
+    .ticker-text {
+        display: flex;
+        flex-shrink: 0; 
+        width: auto;
+        box-sizing: border-box; 
+        text-align: center;  
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 3.5vh;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        background: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+        align-items: center;
+    }
+    // now animation comes in here for the ticker
+    @keyframes ticker-quotes {
+        0% {transform: translate3d(100%, 0, 0);}
+        100% {transform: translate3d(-1500%, 0, 0);}
+    }
+    .ticker-move {
+        animation: ticker-quotes linear 60s infinite;
+    }
+    .ticker-move:hover {
+        animation-play-state: paused;
+        cursor: not-allowed;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING WORK BLOCK =======================
+    .work-intro {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .work-intro-flex {
+        margin: auto;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .work-description {
+        display: flex;
+        flex:1;
+        align-items: center;
+        text-align: center;
+        margin: 5%;
+        order:2;
+        font-family: 'Montserrat', sans-serif;
+        border: 5px solid rgb(34,139,34);
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    .work-description p {
+        margin:5%;
+    }
+    .work-description a {
+        text-decoration: none;
+        color: rgb(30,144,255);
+    }
+    .work-image-div {
+        order: 1;
+    }
+    .work-image {
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 5%;
+        flex:1;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING HOBBIES BLOCK =======================
+    .hobbies-intro {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hobbies-intro-flex {
+        margin: auto;
+        max-width: 90%;
+        align-items: center;
+    }
+    .hobbies-image {
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 5%;
+        flex:1;
+    }
+    .hobbies-description {
+        display: flex;
+        flex:1;
+        align-items: center;
+        text-align: center;
+        margin: 5%;
+        font-family: 'Montserrat', sans-serif;
+        border: 5px solid rgb(34,139,34);
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    .hobbies-description p {
+        margin: 5%;
+    }
+    .hobbies-description a {
+        text-decoration: none;
+        color: rgb(30,144,255);
+    }
+    #hockey-desc {
+        margin: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING APP.HTML LINK =======================
+    .js-app-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .js-app-flex {
+        margin: auto;
+    }
+    .js-app-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 12%;
+        background-color: rgb(34,139,34);
+        color: rgb(211,211,211);
+        padding: 2vw;
+        text-decoration: none; 
+        width: 50%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+    .js-app-link:hover {
+        color: rgb(220,20,60);
+    }
+    .js-app-desc {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 5%;
+        font-family: 'Montserrat', sans-serif;
+        border: 5px solid rgb(34,139,34);
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    .js-app-desc p {
+        margin: 5%;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING ABOUT IMAGE/HEADER =======================
+    .about-page-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about-page-flex {
+        margin: auto;
+    }
+    .about-header {
+        margin-top: 10%;
+        text-align: center;
+        margin-bottom: 8%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 400%;
+        text-shadow: 1px 1px rgb(47,79,79);
+    }
+    .about-image {
+        border-radius: 50%;
+        display: flex;
+        width: 90%;
+        height: auto;
+        margin: 5%;
+        flex:1;
+        margin-bottom: 10%;
+        border: 10px solid  rgb(27, 18, 18);
+        box-shadow: 2px 2px 20px rgb(47,79,79);
+    }
+    //========================================================================
+    
+    
+    // ======================= STYLING ABOUT TABLE =======================
+    .about-table-main {
+        align-items: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    td {
+        text-align: center;
+    }
+    th {
+        width: 40%;
+    }
+    th, td {
+        padding: 2%;
+        text-align: left;
+    }
+    tr:nth-child(odd) {
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    tr:nth-child(even) {
+        background-color: rgb(34,139,34);
+        color: rgb(27, 18, 18);
+    }
+    // Section below here is for styling specifically the table on the hobbies page
+    .hockey-table {
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .hockey-table .hockey-header {
+        text-align: center;
+    }
+    .hockey-table td {
+        text-align: right;
+    }
+    .hockey-table th {
+        text-align: right;
+    }
+    //========================================================================
+    
+
+    // ======================= STYLING SOCIAL ICONS =======================
+    .social-icons {
+        margin-top: 12%;
+        display: flex;
+        margin-bottom: 10%;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .social-icons img {
+        width: 70%;
+    }
+    .social-icons a {
+        display: flex;
+        justify-content: center;
+    }
+    //========================================================================
+    
+    
+    // ======================= STYLING FOOTER =======================
+    .main-footer {
+        margin-top: 8%;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-color: rgb(34,139,34);
+
+    }
+    .nav-footer {
+        display: flex; 
+        padding: 0;  
+    }
+    // styling each list item
+    .nav-footer-item {
+        display: flex;
+        list-style-type: none;
+        flex:2;
+        justify-content: center;
+    }
+    .nav-footer-item a {
+        text-decoration: none;
+        color: rgb(250,235,215);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 125%;
+        text-align: center;
+    }
+    .nav-footer-item a:hover {
+        color: rgb(220,20,60);
+    }
+    #current-page-footer {
+        background-color: rgb(27, 18, 18);
+    }
+    .current-page-footer {
+        background: rgb(27, 18, 18);
+    }
+    //====================================================================
+
+
+    // =============== STYLING WORK MAIN IMAGE BG SECTION ===============
+    .work-main-bg {
+        position: relative;
+        text-align: center;
+        color: rgb(27, 18, 18);
+    }
+    .work-main-bg img {
+        width: 100%;
+        opacity: 0.4;
+    }
+    .work-img-desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+    //====================================================================
+}
+
+// Now below is for styling larger devices 
+@media screen and (min-width: 850px) {
+
+    // ============================ STYLING HEADER ============================
+    .nav-list-drop {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        justify-content:right;
+    }
+    // styling each list item
+    .navigate-item {
+        list-style-type: none;
+        float: right;
+        justify-content: center;
+        padding-right: 3%;
+        padding-left: 3%;
+        display:block;
+        position: relative;
+        background-color: rgb(34,139,34);
+    }
+    .nav-dropdown {
+        display:contents;
+    }
+    // styling each a tag that is in the list items
+    .navigate-item a {
+        text-decoration: none;
+        color: rgb(250,235,215);
+        font-size: 140%;
+        text-align: center;
+    }
+    #current-page {
+        background-color:  rgb(27, 18, 18);
+    }
+    .current-page {
+        background:  rgb(27, 18, 18);
+    }
+    // hide the burger button when big
+    .nav-burger {
+        display: none;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING WORDS/QUOTES =======================
+    // main section top (first word)
+    .main-sect-1 {
+        display: flex;
+        height: 12rem;
+        margin-bottom: 7vh;
+        margin-top: 7vh;
+    }
+    .word-1 {
+        flex-basis: 100%;
+        display: flex;
+        flex: 5;
+        justify-content: right;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 5.5vw;
+        padding-left: 5%;
+    }
+    .word-spacer {
+        display: flex;
+        flex-basis: 100%;
+        flex: 9;
+    }
+    // main section middle (statements/quotes + second word)
+    .main-sect-2 {
+        display: flex;
+        height: 12rem;
+        margin-bottom: 7vh;
+        margin-top: 7vh;
+    }
+    .statement {
+        flex-basis: 100%;
+        display: flex;
+        flex: 5;
+        justify-content: right;
+        align-items: center;
+        text-align: center;
+        font-size: 2vw;
+        margin:2%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+    .word-2 {
+        flex-basis: 100%;
+        display: flex;
+        flex: 6;
+        justify-content: right;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 5.5vw;
+    }
+    .word2-spacer1 {
+        display: flex;
+        flex-basis: 100%;
+        flex: 1;
+    }
+    .word2-spacer2 {
+        display: flex;
+        flex-basis: 100%;
+        flex: 1;
+    }
+    // main section bottom (third and last word)
+    .main-sect-3 {
+        display: flex;
+        height: 12rem;
+        margin-bottom: 7vh;
+        margin-top: 13vh;
+    }   
+    .word-3 {
+        flex-basis: 100%;
+        display: flex;
+        flex: 4;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 5.5vw;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING IMAGE/TABLE =======================
+    .main-intro {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    .main-intro-flex {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    .main-image {
+        max-width: 45%;
+        flex:1;
+    }
+    //========================================================================
+
+
+    // ======================= TICKER TICKER =======================
+    // now animation here as it is different for bigger devices than smaller devices
+    @keyframes ticker-quotes {
+        0% {transform: translate3d(100%, 0, 0);}
+        100% {transform: translate3d(-500%, 0, 0);}
+    }
+    .ticker-move {
+        animation: ticker-quotes linear 60s infinite;
+    }
+    .ticker-move:hover {
+        animation-play-state: paused;
+        cursor: not-allowed;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING WORK BLOCK =======================
+    .work-description {
+        flex:1;
+        align-items: center;
+        text-align: center;
+        order: 1;
+    }
+    .work-image-div {
+        flex:1;
+        order:2;
+        align-items: center;
+    }
+    .work-image {
+        max-width: 100%;
+        flex:3;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING HOBBIES BLOCK =======================
+    .hobbies-intro {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    .hobbies-intro-flex {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    .hobbies-image {
+        max-width: 45%;
+        flex:1;
+    }
+    .hobbies-description {
+        flex:1;
+        align-items: center;
+        text-align: center;
+    }
+    //========================================================================
+
+
+    // ======================= STYLING FOOTER =======================
+    .main-footer {
+        margin-top: 8%;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-color: rgb(34,139,34) ;
+    }
+    .nav-footer {
+        display: flex; 
+        padding: 0; 
+    }
+    // styling each list item
+    .nav-footer-item {
+        display: flex;
+        list-style-type: none;
+        flex:2;
+        justify-content: center;
+
+    }
+    .nav-footer-item a {
+        text-decoration: none;
+        color: rgb(250,235,215);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 150%;
+        text-align: center;
+    }
+    #current-page-footer {
+        background-color:  rgb(27, 18, 18);
+    }
+    .current-page-footer {
+        background:  rgb(27, 18, 18);
+    }
+    //========================================================================
+    
+
+    // ======================= STYLING ABOUT TABLE =======================
+    .about-table-main {
+        align-items: center;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    td {
+        text-align: center;
+    }
+    th {
+        width: 40%;
+    }
+    th, td {
+        padding: 2%;
+        text-align: left;
+    }
+    tr:nth-child(odd) {
+        background-color: rgb(27, 18, 18);
+        color: rgb(250,235,215);
+    }
+    tr:nth-child(even) {
+        background-color: rgb(34,139,34);
+        color: rgb(27, 18, 18);
+    }
+    //========================================================================
+}

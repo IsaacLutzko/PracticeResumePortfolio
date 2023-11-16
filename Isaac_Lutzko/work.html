@@ -1,0 +1,145 @@
+<!-- Name: Isaac Lutzko
+     UCID: 30026703
+     SENG 513 Assignment 1 Section A: Portfolio Website - CPSC related work page 
+     Date: February 13, 2022
+
+     Description: This HTML file is for the page that presents my computer science related 
+     work that I have done in previous courses. Classes discussed are CPSC471, CPSC359,
+     and CPSC441. 
+     
+     References: To complete this website I used the course slides, https://www.w3schools.com/, 
+     and https://developer.mozilla.org/en-US/.
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio CPSC Work</title>
+
+    <!-- Importing css style sheet -->
+    <link rel="stylesheet" href="css/portfolio-style.css">
+
+    <!-- Include links for importing 2 - 3 different fonts (google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+     <!------------------------- HEADER START ------------------------->
+     <header class="portf-header">
+        <a href="" class="portf-logo">Isaac Lutzko</a>
+            <ul class="nav-list-drop">
+                <button class="nav-burger">Enter The Void</button>
+                <div class="nav-dropdown">
+                <li class="navigate-item">
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./hobbies.html">HOBBIES</a>
+                </li>
+                <li id="current-page" class="navigate-item">
+                    <a class="current-page" href="./work.html">WORK</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./home.html">HOME</a>
+                </li>
+                </div>
+            </ul>
+    </header>
+    <!------------------------- END HEADER ------------------------->
+
+
+    <!--------------------- START MAIN BACKGROUND IMAGE --------------------->
+    <div class="work-main-bg">
+        <img src="./images/work-bg-image.jpg" alt="">
+        <div class="work-img-desc">CPSC WORK PROJECTS</div>
+    </div>
+    <!---------------------- END MAIN BG IMAGE ---------------------->
+
+
+    <!--------------------- START WORK PROJECT 1 --------------------->
+    <div class="main-intro">
+        <div class="main-intro-flex">
+            <img class="main-image" src="./images/mac-protocol-image.jpg" alt="">
+            <div class="main-description">
+                <p>
+                    For the last assignment of the computer 
+                    networks course (CPSC 441) when I took it, was to create an efficient
+                    MAC protocol which is used for RFID scanning. Working alone I modelled
+                    a recursive slotted-time MAC protocol in C++ by using a binary tree 
+                    to implement this program. I very much enjoyed doing this project.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END WORK PROJECT 1 --------------------->
+
+
+    <!--------------------- START WORK PROJECT 2 --------------------->
+    <div class="work-intro">
+        <div class="work-intro-flex">
+            <div class="work-description">
+                <p>
+                    For the group term project for the DBMS course I took (CPSC 471) my 
+                    group decided to make a mindful social media website with a full frontend
+                    and backend. My group of 4 used SQL, TypeScript, PostgreSQL, NodeJS, and React to 
+                    create this program. Although it was a very difficult program to create,
+                    we were passionate about creating a program that had the goal of creating
+                    a social media that aims at fixing the negative side-effects that come
+                    from the current use of social media by their users.
+                </p>
+            </div>
+            <div class="work-image-div"><img class="work-image" src="./images/better-together-image.jpg" alt=""></div>
+        </div>
+    </div>
+    <!--------------------- END WORK PROJECT 2 --------------------->
+
+
+    <!--------------------- START WORK PROJECT 3 --------------------->
+    <div class="hobbies-intro">
+        <div class="hobbies-intro-flex">
+            <img class="hobbies-image" src="./images/frogger-image.jpg" alt="">
+            <div class="hobbies-description">
+                <p>
+                    For the partner project for the second computing machinery course I took 
+                    (CPSC 359) we were tasked with creating the classic "Frogger" arcade game 
+                    using a Rasbperry Pi and a SNES controller. The SNES controller was connected
+                    to the Raspberry Pi which contained our program that was written in C. Users 
+                    could play the game using the SNES controllers that read input from the Rasbperry
+                    Pi, and we were in charge of creating the whole program, including the graphics 
+                    and collision detection aspects. Gameplay included different difficulty level, 
+                    power-ups when collected by users, and a score-tracking system.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END WORK PROJECT 3 --------------------->
+
+
+    <!--------------------- START "FOOTER" --------------------->
+    <footer class="main-footer">
+        <ul class="nav-footer">
+            <li class="nav-footer-item">
+                <a href="./about.html">ABOUT</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./hobbies.html">HOBBIES</a>
+            </li>
+            <li id="current-page-footer" class="nav-footer-item">
+                <a class="current-page-footer" href="./work.html">WORK</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./home.html">HOME</a>
+            </li>
+        </ul>
+    </footer>
+    <!--------------------- END "FOOTER" --------------------->
+
+    
+</body>
+</html>

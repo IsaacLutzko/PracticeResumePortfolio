@@ -1,0 +1,186 @@
+<!-- Name: Isaac Lutzko
+     UCID: 30026703
+     SENG 513 Assignment 1 Section A: Portfolio Website - home page 
+     Date: February 13, 2022
+
+     Description: This HTML file is for the home page for this portfolio website. At the bottom of
+     the page there is a link to the web App and a description for it. Design was very important 
+     to me, especially colour schemes, font selection, layout, and extra creative ideas. 
+     
+     References: To complete this website I used the course slides, https://www.w3schools.com/, 
+     and https://developer.mozilla.org/en-US/.
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Home</title>
+
+    <!-- Importing css style sheet -->
+    <link rel="stylesheet" href="css/portfolio-style.css">
+
+    <!-- Include links for importing 2 - 3 different fonts (google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!------------------------- HEADER START ------------------------->
+    <header class="portf-header">
+        <a href="" class="portf-logo">Isaac Lutzko</a>
+            <ul class="nav-list-drop">
+                <button class="nav-burger">ENTER THE VOID</button>
+                <div class="nav-dropdown">
+                <li class="navigate-item">
+                    <a href="./about.html">ABOUT</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./hobbies.html">HOBBIES</a>
+                </li>
+                <li class="navigate-item">
+                    <a href="./work.html">WORK</a>
+                </li>
+                <li id="current-page" class="navigate-item">
+                    <a class="current-page" href="./home.html">HOME</a>
+                </li>
+                </div>
+            </ul>
+    </header>
+    <!------------------------- END HEADER ------------------------->
+
+
+    <!--------------------- START MAIN SECTION --------------------->
+    <div class="main-sect-1">
+        <h1 class="word-1">AUTHENTIC</h1>
+        <h1 class="word-spacer"></h1>
+    </div>
+    <div class="main-sect-2">
+        <h4 class="word2-spacer1"></h4>
+        <h4 class="statement">"perfection is ugly... mens sana in corpore
+            sano... death should never be feared... 
+            a smooth sea never made a skilled sailor...
+            I am what I am... amor fati..."</h4>
+        <h1 class="word-2">RESILIENT</h1>
+        <h4 class="word2-spacer2"></h4>
+    </div>
+    <div class="main-sect-3">
+        <h1 class="word-3">COOLHEADED</h1>
+    </div>
+    <!---------------------- END MAIN SECTION ---------------------->
+
+
+    <!--------------------- START INTRO OF ME --------------------->
+    <div class="main-intro">
+        <div class="main-intro-flex">
+            <img class="main-image" src="./images/P1016578.JPG" alt="">
+            <div class="main-description"> <p>
+                Hi I'm Isaac! I'm in my fourth year at the 
+                University of Calgary working towards a double major in Computer Science
+                and Commerce. Please enjoy my portfolio assignment which displays my 
+                Computer Science projects and my hobbies, and if you are interested in
+                working with me, you can contact me <a href="./about.html">here</a>!</p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END INTRO OF ME --------------------->
+    
+
+    <!--------------------- START TICKER --------------------->
+    <div class="ticker-main">
+        <div class="ticker-move">
+            <div class="ticker-text">"BE A HUMAN BEING NOT A HUMAN DOING"</div>
+            <div class="ticker-text">"NOTHING IS ENOUGH FOR THE MAN TO WHOM ENOUGH IS TOO LITTLE"</div>
+            <div class="ticker-text">"THERE IS NO ENJOYING THE POSSESSION OF ANYTHING VALUABLE
+                UNLESS ONE HAS SOMEONE TO SHARE IT WITH"</div>
+            <div class="ticker-text">"IT'S ONLY AFTER WE'VE LOST EVERYTHING THAT WE'RE FREE TO DO ANYTHING"</div>
+            <div class="ticker-text">"SOME MAY NEVER LIVE, BUT THE CRAZY NEVER DIE"</div>
+            <div class="ticker-text">"SEEK SOLITUDE BUT SOLITUDE WITHOUT PURPOSE IS A 
+                KILLER OF CREATIVITY"</div>
+            <div class="ticker-text">"THIS IS YOUR LIFE AND ITS ENDING ONE MOMENT AT A TIME"</div>
+            <div class="ticker-text">"TOO WEIRD TO LIVE, TOO RARE TO DIE"</div>
+            <div class="ticker-text">"I DON'T WANT TO DIE WITHOUT ANY SCARS"</div>
+        </div>
+    </div>
+    <!--------------------- END TICKER --------------------->
+  
+  
+    <!--------------------- START WORK BLOCK --------------------->
+    <div class="work-intro">
+        <div class="work-intro-flex">
+            <div class="work-description">
+                <p>Throughout my life I have always had a passion 
+                    for creating and designing things whether it be clothing, art, or music, and as 
+                    a computer science student, this applies to the computer programs I have made 
+                    in my university career. To see some of the programs I have created and am proudest
+                    of, check them out <a href="./work.html">here</a>!
+                </p>
+            </div>
+            <div class="work-image-div"><img class="work-image" src="./images/work-main-image.jpg" alt=""></div>
+        </div>
+    </div>
+    <!--------------------- END WORK BLOCK --------------------->
+
+
+    <!--------------------- START HOBBIES BLOCK --------------------->
+    <div class="hobbies-intro">
+        <div class="hobbies-intro-flex">
+            <img class="hobbies-image" src="./images/main-hobbies-image.jpg" alt="">
+            <div class="hobbies-description">
+                <p>
+                    Although I do enjoy creating software related programs, there are also other
+                    things in my life that I love and appreciate having the ability to do. To check
+                    out some of my hobbies, click <a href="./hobbies.html">here</a>!
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END HOBBIES BLOCK --------------------->
+
+
+    <!--------------------- START APP.HTML LINK --------------------->
+    <div class="js-app-main">
+        <div class="js-app-flex">
+            <a class="js-app-link" href="./app.html">Link To Web App Here!</a>
+            <div class="js-app-desc">
+                <p>
+                This web app calculates statistics on the text
+                that is inserted into the text box at the top - from there a user
+                can select the 'Compute Stats' button and the statistics will be
+                shown. The information of the text that is in the text box shows
+                the number of characters, the number of words, the number of 
+                lines, the number of non-empty lines, the average word length, 
+                the maximum line length, the 10 longest words, and the most
+                frequent words in the text.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--------------------- END APP.HTML LINK --------------------->
+
+
+    <!--------------------- START "FOOTER" --------------------->
+    <footer class="main-footer">
+        <ul class="nav-footer">
+            <li class="nav-footer-item">
+                <a href="./about.html">ABOUT</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./hobbies.html">HOBBIES</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./work.html">WORK</a>
+            </li>
+            <li id="current-page-footer" class="nav-footer-item">
+                <a class="current-page-footer" href="./home.html">HOME</a>
+            </li>
+        </ul>
+    </footer>
+    <!--------------------- END "FOOTER" --------------------->
+
+</body>
+</html>

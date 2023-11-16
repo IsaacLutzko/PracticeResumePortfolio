@@ -1,0 +1,117 @@
+<!-- Name: Isaac Lutzko
+     UCID: 30026703
+     SENG 513 Assignment 1 Section A: Portfolio Website - about us page with contact info 
+     Date: February 13, 2022
+
+     Description: This HTML file is for the about us page that has my contact info. Some of
+     the contact info is true and some is not true (as per Professor Alabood about optional
+     about using real contact info). 
+     
+     References: To complete this website I used the course slides, https://www.w3schools.com/, 
+     and https://developer.mozilla.org/en-US/.
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio About</title>
+
+     <!-- Importing css style sheet -->
+     <link rel="stylesheet" href="css/portfolio-style.css">
+
+    <!-- Include links for importing 2 - 3 different fonts (google fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+     <!------------------------- HEADER START ------------------------->
+     <header class="portf-header">
+        <a href="" class="portf-logo">Isaac Lutzko</a>
+            <ul class="nav-list-drop">
+                <button class="nav-burger">Enter The Void</button>
+                <div class="nav-dropdown">
+                    <li id="current-page" class="navigate-item">
+                        <a class="current-page" href="./about.html">ABOUT</a>
+                    </li>
+                    <li class="navigate-item">
+                        <a href="./hobbies.html">HOBBIES</a>
+                    </li>
+                    <li class="navigate-item">
+                        <a href="./work.html">WORK</a>
+                    </li>
+                    <li class="navigate-item">
+                        <a href="./home.html">HOME</a>
+                    </li>
+                </div>
+            </ul>
+    </header>
+    <!------------------------- END HEADER ------------------------->
+
+
+    <!------------------------- START ABOUT MAIN SECTION ------------------------->
+    <div class="about-page-main">
+        <div class="about-page-flex">
+            <h1 class="about-header">Say Hello!!!</h1>
+            <img class="about-image" src="./images/about-image.JPEG" alt="">
+            <table class="about-table-main">
+            <tr>
+                <th>Email:</th>
+                <td>ilutzko@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td>403-KIK-ROKS</td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>321 BananaLand Drive NW</td>
+            </tr>
+            <tr>
+                <th>Country:</th>
+                <td>Timbuktu</td>
+            </tr>
+            <tr>
+                <th>City:</th>
+                <td>MetalTown</td>
+            </tr>
+            </table>
+        
+            <div class="social-icons">
+                <a class="linkedin" href="http://www.linkedin.com/in/isaac-lutzko"><img src="./images/linkedin-image.png" alt=""></a>
+                <a class="github" href="https://github.com/IsaacLutzko?tab=repositories"><img src="./images/github-image.png" alt=""></a>
+                <a class="instagram" href="https://www.instagram.com/isaaclutzko/"><img src="./images/instagram-image.png" alt=""></a>
+                <a class="twitter" href="https://twitter.com/isaaclutzko"><img src="./images/twitter-image.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!------------------------- END ABOUT MAIN SECTION ------------------------->
+
+
+    <!--------------------- START "FOOTER" --------------------->
+    <footer class="main-footer">
+        <ul class="nav-footer">
+            <li id="current-page-footer" class="nav-footer-item">
+                <a class="current-page-footer" href="./about.html">ABOUT</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./hobbies.html">HOBBIES</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./work.html">WORK</a>
+            </li>
+            <li class="nav-footer-item">
+                <a href="./home.html">HOME</a>
+            </li>
+        </ul>
+    </footer>
+    <!--------------------- END "FOOTER" --------------------->
+
+</body>
+</html>
