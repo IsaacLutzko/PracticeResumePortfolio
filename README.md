@@ -1,8 +1,10 @@
 # PracticeResumePortfolio
 
-Description: A practice resume portfolio that uses HTML, CSS, Vanilla JS, and a JS web app that takes in text in a text box and outputs specific data about the text. 
+Description: A practice resume portfolio that uses HTML, CSS, Vanilla JS. 
 
-Notes: A video that shows the resume portfolio project as well as a pdf that contains screenshots to display the project
+Note 1: A video that shows the resume portfolio project as well as a pdf that contains screenshots to display the project.
+
+Update: the JS files for this project were removed.
 
 Running Instructions: 
   1) Download zip
